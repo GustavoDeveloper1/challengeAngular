@@ -1,0 +1,33 @@
+.container {
+    width: 30%;
+    height: auto;
+    margin: 4rem auto;
+    padding: 2rem;
+    border: 1px solid #cdcdcd;
+    border-radius: 1rem ;
+    box-shadow: 1px 1px 5px 4px #cdcdcd;
+}
+
+.ng-invalid.ng-touched:not(form) {
+    border: 1px solid red;
+}
+
+.ng-valid.ng-dirty:not(form) {
+    border: 1px solid green;
+}
+
+.form-group {
+    height: 5rem;
+}
+.form-text {
+    
+    color: red;
+
+}
+
+.form-links {
+    height: 3rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
