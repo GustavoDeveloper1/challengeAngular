@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
+import { UsersComponent } from './components/users/users.component';
+import { HomeComponent } from './components/home/home.component';
+// import { CriarUserComponent } from './components/Users/criar-user/criar-user.component';
 
 
 
@@ -15,6 +18,9 @@ import { AuthService } from './services/auth.service';
   declarations: [
     AppComponent,
     LoginComponent,
+    UsersComponent,
+    HomeComponent,
+    // CriarUserComponent,
 
   ],
   imports: [

@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { take } from 'rxjs';
 
 import { User } from '../Interface/User';
 
@@ -11,8 +13,12 @@ export class AuthService {
   private usuarioAuthenticado: boolean = false;
   mostrarMenuEmmiter = new EventEmitter<boolean>();
   ErrorEnter:boolean = false;
-
-  constructor(private router: Router) { }
+  API = 'http://localhost:5000/user';
+  
+  constructor(
+    private router: Router,
+    private http: HttpClient
+    ) { }
 
 
   Authlogin(user: User) {
@@ -21,11 +27,11 @@ export class AuthService {
       this.usuarioAuthenticado = true;
 
       this.mostrarMenuEmmiter.emit(true)
-      console.log("Foi")
-      this.router.navigate(['/']);
+
+      this.router.navigate(['/home']);
       this.ErrorEnter = false
     } else {
-      console.log("Deu erro", user)
+
 
       this.usuarioAuthenticado = false;
 
@@ -36,6 +42,9 @@ export class AuthService {
     }
   }
 
+  createUser(user:any) {
+    return this.http.post(this.API,user).pipe(take(1))
+  }
 
   
   UserIsAuthenticated() {

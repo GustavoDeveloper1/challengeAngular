@@ -1,0 +1,39 @@
+{
+  "user": [
+      {
+          "id": 1,
+          "name": "gustavo@gmail.com",
+          "password": "12345",
+          "cpf": "000.000.000-00",
+          "profissao": "Desenvolvedor",
+          "dataNascimento": "18-03-2000",
+          "telefone": "4002-8922"
+      }
+  ],
+  "jogadores":[
+    {
+      "id":1,
+    "Nome":"Neymar Junior da Silva",
+    "Idade": "30",
+    "Clube" : "Paris Sant German",
+    "selecao": "Brasil",
+    "Posição": "PE"
+    },
+    {
+      "id":2,
+    "Nome":"Cristiano Ronaldo",
+    "Idade": "36",
+    "Clube" : "Manchester United",
+    "selecao": "Portugal",
+    "Posição": "CA"
+    },
+    {
+      "id":3,
+    "Nome":"Lionel Messi",
+    "Idade": "35",
+    "Clube" : "Paris Sant German",
+    "selecao": "Argentina",
+    "Posição": "PD"
+    }
+  ]
+}
